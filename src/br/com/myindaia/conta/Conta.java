@@ -1,6 +1,6 @@
 package br.com.myindaia.conta;
 
-public class Conta {
+public abstract class Conta {
 	private double saldo;
 	
 	public void saca(double valor){
@@ -15,7 +15,5 @@ public class Conta {
 		return this.saldo;
 	}
 	
-	public void atualiza(double taxa){
-		this.saldo += this.saldo * taxa;
-	}
+	public abstract void atualiza(double taxaSelic);
 }
